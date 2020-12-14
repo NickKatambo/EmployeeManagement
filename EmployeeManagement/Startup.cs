@@ -44,6 +44,10 @@ namespace EmployeeManagement
                 };
                 app.UseDeveloperExceptionPage(developerExceptionPageExtensions);
             }
+            else
+            {
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
     
             app.UseHttpsRedirection();
             app.UseStaticFiles();
