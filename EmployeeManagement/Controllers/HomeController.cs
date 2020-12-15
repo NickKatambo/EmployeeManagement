@@ -32,6 +32,8 @@ namespace EmployeeManagement.Controllers
         [Route("Home/Details/{id?}")]
         public ViewResult Details(int? id)
         {
+            throw new Exception("An error occured while....");
+
             Employee employee = _employeeRepository.GetEmployee(id.Value);
 
             if (employee == null)
